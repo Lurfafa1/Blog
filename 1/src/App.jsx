@@ -24,16 +24,18 @@ function App() {
 
 
   return !loading ? (
-    <div className="min-h-screen flex flex-wrap content-between bg-gray-500">
-      <div className="w-full block">
-        <Header />
-        <main>
-          <Outlet />
-        </main>
-        <Footer />
-      </div>
+    <div className="min-h-screen flex flex-col bg-gray-50">
+      <Header />
+      <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <Outlet />
+      </main>
+      <Footer />
     </div>
-  ) : null
+  ) : (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="animate-pulse text-gray-500">Loading...</div>
+    </div>
+  )
 
 }
 
