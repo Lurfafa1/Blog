@@ -1,53 +1,30 @@
-# Ignore everything by default
-*
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-# Track these files
-!.gitignore
-!src/**/*.jsx
-!src/**/*.css
-!package.json
-!tailwind.config.js
-!postcss.config.js
-!vite.config.js
-!eslint.config.js
-!README.md
+# testing
+/coverage
 
-# Security and credentials
-.env*
-*.local
-**/credentials*
-**/secret*
-**/*.key
-**/*.pem
-**/*.cert
-**/*.password*
-**/*.auth*
-**/*.config.*
-**/*-key.*
+# production
+/build
+/dist
 
-# Allowed configs
-!tailwind.config.js
-!postcss.config.js
-!vite.config.js
-!eslint.config.js
+# environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*
+!.env.example
 
-# Development artifacts
-**/.temp/
-**/.cache/
-**/dist/
-**/build/
-coverage/
-node_modules/
-
-# Logs and debugging
-*.log
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-debug.log*
-*.debug
 
-# Editor and OS files
+# editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -57,3 +34,18 @@ debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# secrets and credentials
+*.pem
+*.key
+*.cert
+*secret*
+*credential*
+*.password
+*auth.config*
+*config.json
+
+# misc
+*.log
+.cache
+.temp
